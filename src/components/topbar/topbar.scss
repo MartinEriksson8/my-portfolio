@@ -1,8 +1,107 @@
+@import "../../global.scss";
+
 .topbar {
-    background-color: navy;
+
+    background-color: white; 
+    color: $mainColor;
     width: 100%;
     height: 70px;
     position: fixed;
     top: 0px;
     z-index: 2;
+    scrollbar-width: none; // for Firefox
+    &::-webkit-scrollbar{
+        display: none; // for Chrome, IE etc
+    }
+
+    .wrapper{
+
+        padding: 5px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .left{
+            
+            display: flex;
+            align-items: center;
+
+            .logo{
+
+                font-size: 40px;
+                font-weight: 700;
+                text-decoration: none;
+                color: inherit;
+                margin-right: 40px;
+
+            }
+
+            .itemContainer {
+
+                display: flex;
+                align-items: center;
+                margin-left: 40px;
+
+                .icon{
+
+                    font-size: 18px;
+                    margin-right: 5px;
+
+                }
+
+                span{
+
+                    font-size: 18px;
+                    font-weight: 500;
+
+                }
+            }
+        }
+
+        .right{
+
+            .hambugerMenu{
+
+                display: flex;
+                width: 32px;
+                height: 25px;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                z-index: 2;
+
+                span{
+
+                    height: 3px;
+                    width: 100%;
+                    background-color: $mainColor;
+                    transform-origin: left;
+                    transition: all 1s ease;
+
+                }
+            }
+        }
+    }
+
+    &.active{
+
+        background-color: $mainColor;
+        color: white;
+
+        .hambugerMenu{
+            span{
+                &:first-child{
+                    background-color: white;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:last-child{
+                    background-color: white;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
 }

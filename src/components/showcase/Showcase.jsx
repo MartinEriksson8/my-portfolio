@@ -3,7 +3,7 @@ import "./showcase.scss"
 
 export default function Showcase() {
     return (
-        <div className="showcase">
+        <div className="showcase" id='showcase'>
            
         </div>
     )
