@@ -9,6 +9,7 @@
     position: fixed;
     top: 0px;
     z-index: 2;
+    transition: all 1s ease;
     scrollbar-width: none; // for Firefox
     &::-webkit-scrollbar{
         display: none; // for Chrome, IE etc
