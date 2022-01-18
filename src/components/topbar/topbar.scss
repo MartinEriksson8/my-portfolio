@@ -8,7 +8,7 @@
     height: 70px;
     position: fixed;
     top: 0px;
-    z-index: 2;
+    z-index: 3;
     transition: all 1s ease;
     scrollbar-width: none; // for Firefox
     &::-webkit-scrollbar{
@@ -69,7 +69,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 cursor: pointer;
-                z-index: 2;
+                z-index: 3;
 
                 span{
 
